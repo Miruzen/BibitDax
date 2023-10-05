@@ -21,6 +21,7 @@ class _LoginState extends State<Login> {
           ])),
       child: Scaffold(
         backgroundColor: Colors.transparent,
+        body: _page(),
       ),
     );
   }
@@ -29,7 +30,8 @@ class _LoginState extends State<Login> {
     return Center(
       child: Column(children: [
         _icon(),
-      ]),
+      ]
+      ),
     );
   }
 
@@ -38,7 +40,7 @@ class _LoginState extends State<Login> {
       decoration: BoxDecoration(
           border: Border.all(color: Colors.white, width: 2),
           shape: BoxShape.circle),
-      child: const Icon(Icons.person, color: Colors.white, size: 120),
+      child: const Icon(Icons.wallet_outlined, color: Colors.white, size: 120),
     );
   }
 }
