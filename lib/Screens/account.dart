@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, file_names
 
 import 'package:flutter/material.dart';
+import 'package:personal_finance/Screens/Login.dart';
 
 class Account extends StatefulWidget {
   const Account({Key? key}) : super(key: key);
@@ -150,7 +151,9 @@ class _AccountState extends State<Account> {
               style: ButtonStyle(
                   backgroundColor:
                       MaterialStateProperty.all<Color>(Colors.redAccent)),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context , MaterialPageRoute(builder: (context) => Login(),));
+              },
               child: Text(
                 "Log Out",
                 style: TextStyle(color: Colors.white),

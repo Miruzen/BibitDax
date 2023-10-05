@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:personal_finance/Screens/SignUp.dart';
+import 'package:personal_finance/Widgets/bottomnavbar.dart';
 
 class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);
@@ -38,9 +40,9 @@ class _LoginState extends State<Login> {
         children: [
         _icon(),
         const SizedBox(height: 50) ,
-        _inputField1("Enter E-mail",  UsernameController) , 
+        _inputField2("Enter E-mail",  Icon(Icons.email_outlined),UsernameController) , 
         const SizedBox(height: 30) ,
-        _inputField2("Enter Password", passwordController , isPassword : true    ) , 
+        _inputField2("Enter Password", Icon(Icons.lock_outline) , passwordController , isPassword : true    ) , 
         const SizedBox(height : 50 ) , 
         _LoginBtn() , 
         const SizedBox(height: 20,) ,
@@ -61,39 +63,23 @@ class _LoginState extends State<Login> {
     );
   }
 
-  Widget _inputField1(String Text , TextEditingController controller ,){
-
-    var border = OutlineInputBorder(
-      borderRadius: BorderRadius.circular(80) , 
-      borderSide: const BorderSide(color: Colors.white),
-    );
-    return TextField(
-      style: const TextStyle( color: Colors.white),
-      controller: controller,
-      decoration: InputDecoration(
-        prefixIcon: Icon(Icons.email) ,prefixIconColor: Color.fromRGBO(50, 50, 50, 40), 
-        hintText: Text , 
-        hintStyle: const TextStyle(color: Colors.white ),
-        enabledBorder: border, 
-        focusedBorder: border ,
-      ),
-    ) ; 
-  }
-  Widget _inputField2(String Text , TextEditingController controller ,
+  
+  Widget _inputField2(String Text ,Icon icon ,  TextEditingController controller ,
   {isPassword = false }){
 
     var border = OutlineInputBorder(
       borderRadius: BorderRadius.circular(80) , 
-      borderSide: const BorderSide(color: Colors.white),
-    );
+      borderSide: const BorderSide(color: Color.fromRGBO(175, 175, 175, 170),
+    ));
     return TextField(
-      style: const TextStyle( color: Colors.white),
+      style: const TextStyle( color: Colors.red),
       controller: controller,
       decoration: InputDecoration(
-        prefixIcon: Icon(Icons.lock),prefixIconColor: Color.fromRGBO(50, 50, 50, 40), 
+        filled: true , fillColor: Color.fromRGBO(175, 175, 175, 0.50),
+        prefixIcon: icon ,prefixIconColor: Colors.black, 
         hintText: Text , 
         hintStyle: const TextStyle(color: Colors.white ),
-        enabledBorder: border, 
+        enabledBorder: border,
         focusedBorder: border ,
       ),
       obscureText: isPassword,
@@ -102,8 +88,7 @@ class _LoginState extends State<Login> {
   Widget _LoginBtn() {
     return ElevatedButton(
       onPressed: () {
-        debugPrint("Username : " + UsernameController.text) ; 
-        debugPrint("Password :  " + passwordController.text)  ; 
+        Navigator.push(context , MaterialPageRoute(builder: (context) => Bottom(),));
       }
       , child: const SizedBox(
         width: double.infinity,
@@ -123,10 +108,23 @@ class _LoginState extends State<Login> {
   }
 
   Widget _Noacc() {
+    
+    // return Row(
+    //   mainAxisAlignment: MainAxisAlignment.center , 
+    //   children: [
+    //     const Text("Dont have an account ? ", 
+    //     style: TextStyle(color: Colors.white , fontWeight: FontWeight.bold),) ,
+    //     GestureDetector(
+    //       onTap: () {
+    //         Navigator.push(context, MaterialPageRoute(builder: (context) => SignUp(),)) ;
+    //       },
+    //       child: const Text("Sign Up" , style: TextStyle(color: Colors.white , fontWeight: FontWeight.bold),),
+    //     )
+    //   ],
+    // ) ;
     return ElevatedButton(
       onPressed: () {
-        debugPrint("Username : " + UsernameController.text) ; 
-        debugPrint("Password :  " + passwordController.text)  ; 
+        Navigator.push(context, MaterialPageRoute(builder: (context) => SignUp(),)) ;
       }
       , child: const SizedBox(
         width: 250,
