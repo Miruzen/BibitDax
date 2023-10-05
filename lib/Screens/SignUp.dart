@@ -23,8 +23,15 @@ class _SignUpState extends State <SignUp> {
       child: Scaffold(
         resizeToAvoidBottomInset: false,
         backgroundColor: Colors.transparent,
-        
+        body: _PageSign(),
       ),
     );
+  }
+  
+  Widget _PageSign() {
+    return Padding( 
+      padding: const EdgeInsets.all(30.0)
+
+    ) ;
   }
 }
