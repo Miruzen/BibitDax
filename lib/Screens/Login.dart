@@ -16,12 +16,12 @@ class _LoginState extends State<Login> {
               begin: Alignment.topRight,
               end: Alignment.bottomLeft,
               colors: [
-            Color.fromRGBO(0, 255, 117, 100),
-            Color.fromRGBO(0, 87, 0, 100),
+            Color.fromRGBO(0, 255, 102, 0.863),
+            Color.fromRGBO(30, 146, 65, 0.816),
           ])),
-      // child: Scaffold(
-      //   backgroundColor: Colors.transparent,
-      // ),
+      child: Scaffold(
+        backgroundColor: Colors.transparent,
+      ),
     );
   }
 }
