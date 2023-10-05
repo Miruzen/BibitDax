@@ -1,3 +1,4 @@
+import 'dart:ffi';
 import 'package:hive/hive.dart';
 import 'package:personal_finance/data/add_data.dart';
 
@@ -5,13 +6,13 @@ int totals = 0;
 
 final box = Hive.box<Add_data>('data');
 
-int total() {
+int get total {
   var history2 = box.values.toList();
   List a = [0, 0];
   for (var i = 0; i < history2.length; i++) {
     a.add(history2[i].IN == 'Income'
         ? int.parse(history2[i].amount)
-        : int.parse(history2[i].amount) * -1);
+        : int.parse(history2[i].amount).toDouble());
   }
   totals = a.reduce((value, element) => value + element);
   return totals;

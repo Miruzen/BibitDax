@@ -208,7 +208,7 @@ class _HomeState extends State<Home> {
                   child: Row(
                     children: [
                       Text(
-                        '\$ ${total()}',
+                        '\$ ${total}',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 25,
