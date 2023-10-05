@@ -42,7 +42,7 @@ class _HomeState extends State<Home> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
-                              'Transactions History ',
+                              'Transactions abcd ',
                               style: TextStyle(
                                 fontWeight: FontWeight.w600,
                                 fontSize: 19,
