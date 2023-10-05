@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:personal_finance/Widgets/bottomnavbar.dart';
+import 'package:personal_finance/Screens/Login.dart';
 import 'package:personal_finance/data/add_data.dart';
 
 void main() async {
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Bottom(),
+      home: Login(),
     );
   }
 }
