@@ -47,8 +47,8 @@ class _LoginState extends State<Login> {
         _LoginBtn() , 
         const SizedBox(height: 20,) ,
         _Noacc(),
-        const SizedBox(height: 10,) ,
-        Text("Dont have an account ?")
+        // const SizedBox(height: 10,) ,
+        // Text("Dont have an account ?")
           ]  
         ),
       )
@@ -109,38 +109,38 @@ class _LoginState extends State<Login> {
 
   Widget _Noacc() {
     
-    // return Row(
-    //   mainAxisAlignment: MainAxisAlignment.center , 
-    //   children: [
-    //     const Text("Dont have an account ? ", 
-    //     style: TextStyle(color: Colors.white , fontWeight: FontWeight.bold),) ,
-    //     GestureDetector(
-    //       onTap: () {
-    //         Navigator.push(context, MaterialPageRoute(builder: (context) => SignUp(),)) ;
-    //       },
-    //       child: const Text("Sign Up" , style: TextStyle(color: Colors.white , fontWeight: FontWeight.bold),),
-    //     )
-    //   ],
-    // ) ;
-    return ElevatedButton(
-      onPressed: () {
-        Navigator.push(context, MaterialPageRoute(builder: (context) => SignUp(),)) ;
-      }
-      , child: const SizedBox(
-        width: 250,
-        child: Text(
-          "SIGN UP" , 
-          textAlign: TextAlign.center,
-          style: TextStyle(fontSize: 15),
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center , 
+      children: [
+        const Text("Dont have an account ? ", 
+        style: TextStyle(color: Colors.white , ),) ,
+        GestureDetector(
+          onTap: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context) => SignUp(),)) ;
+          },
+          child: const Text("Sign Up" , style: TextStyle(color: Colors.white , fontWeight: FontWeight.bold),),
         )
-      ),
-      style: ElevatedButton.styleFrom(
-        shape: const StadiumBorder() , 
-        primary: Color.fromARGB(200, 228, 226, 226) ,
-        onPrimary: Colors.black , 
-        padding:  const EdgeInsets.symmetric(vertical: 10)  , 
-      ),
-    ) ; 
+      ],
+    ) ;
+    // return ElevatedButton(
+    //   onPressed: () {
+    //     Navigator.push(context, MaterialPageRoute(builder: (context) => SignUp(),)) ;
+    //   }
+    //   , child: const SizedBox(
+    //     width: 250,
+    //     child: Text(
+    //       "SIGN UP" , 
+    //       textAlign: TextAlign.center,
+    //       style: TextStyle(fontSize: 15),
+    //     )
+    //   ),
+    //   style: ElevatedButton.styleFrom(
+    //     shape: const StadiumBorder() , 
+    //     primary: Color.fromARGB(200, 228, 226, 226) ,
+    //     onPrimary: Colors.black , 
+    //     padding:  const EdgeInsets.symmetric(vertical: 10)  , 
+    //   ),
+    // ) ; 
   }
 
 
