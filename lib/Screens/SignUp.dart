@@ -12,7 +12,7 @@ class _SignUpState extends State<SignUp> {
   TextEditingController UsernameController = TextEditingController();
   TextEditingController EmailController = TextEditingController();
   TextEditingController PasswordController = TextEditingController();
-
+  bool isBtnActive = true ; 
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -65,19 +65,23 @@ class _SignUpState extends State<SignUp> {
   Widget _Btn() {
     return ElevatedButton(
       onPressed: () {
+        if ( UsernameController.text.isNotEmpty && EmailController.text.isNotEmpty
+        && PasswordController.text.isNotEmpty ){
         Navigator.pop(
             context,
             MaterialPageRoute(
               builder: (context) => Login(),
             ));
-      },
+        } 
+      } , 
       child: const SizedBox(
           width: double.infinity,
           child: Text(
             "SIGN UP",
             textAlign: TextAlign.center,
             style: TextStyle(fontSize: 18),
-          )),
+          )
+        ),
       style: ElevatedButton.styleFrom(
         shape: const StadiumBorder(),
         primary: Color.fromARGB(255, 228, 226, 226),
@@ -116,7 +120,7 @@ class _SignUpState extends State<SignUp> {
   }
 
   Widget _inputField2(String Text, Icon icon, TextEditingController controller,
-      {isPassword = false}) {
+      {isPassword = false} ) {
     var border = OutlineInputBorder(
       borderRadius: BorderRadius.circular(80),
       borderSide: const BorderSide(color: Color.fromRGBO(175, 175, 175, 170)),
@@ -135,6 +139,6 @@ class _SignUpState extends State<SignUp> {
         focusedBorder: border,
       ),
       obscureText: isPassword,
-    );
+      );
   }
 }
