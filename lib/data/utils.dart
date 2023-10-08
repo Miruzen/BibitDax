@@ -11,7 +11,7 @@ int get total {
   for (var i = 0; i < history2.length; i++) {
     a.add(history2[i].IN == 'Income'
         ? int.parse(history2[i].amount)
-        : int.parse(history2[i].amount).toDouble());
+        : int.parse(history2[i].amount) * -1);
   }
   totals = a.reduce((value, element) => value + element);
   return totals;
