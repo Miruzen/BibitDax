@@ -40,7 +40,7 @@ class _ForgetPasswd extends State<ForgetPasswd> {
             const SizedBox(
               height: 50,
             ),
-            _Header("   Change Your Password"),
+            _Header("  Change Your Password"),
             const SizedBox(height: 20),
             _inputField2(
               "Input your E-mail",
@@ -50,7 +50,7 @@ class _ForgetPasswd extends State<ForgetPasswd> {
             const SizedBox(height: 20,),
             _inputField2(
               "Your current Password",
-              Icon(Icons.lock_outline), OldPasswordController,
+              Icon(Icons.lock_outline), OldPasswordController, isPassword: true
             ),
             const SizedBox(height: 20,),
             _inputField2(
@@ -66,7 +66,7 @@ class _ForgetPasswd extends State<ForgetPasswd> {
     return ElevatedButton(
       onPressed: () {
         if (  EmailController.text.isNotEmpty && OldPasswordController.text.isNotEmpty
-         && NewPasswordController.text.isNotEmpty){
+        && NewPasswordController.text.isNotEmpty){
         Navigator.pop(
             context,
             MaterialPageRoute(
@@ -112,7 +112,7 @@ class _ForgetPasswd extends State<ForgetPasswd> {
           style: TextStyle(
             color: Colors.white,
             fontWeight: FontWeight.bold,
-            fontSize: 30,
+            fontSize: 25,
           ),
         ),
       ],
