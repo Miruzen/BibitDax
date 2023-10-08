@@ -88,6 +88,7 @@ class _LoginState extends State<Login> {
   Widget _LoginBtn() {
     return ElevatedButton(
       onPressed: () {
+        if ( UsernameController.text.isNotEmpty && passwordController.text.isNotEmpty)
         Navigator.push(context , MaterialPageRoute(builder: (context) => Bottom(),));
       }
       , child: const SizedBox(
