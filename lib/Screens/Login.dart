@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:personal_finance/Screens/ForgetPasswd.dart';
 import 'package:personal_finance/Screens/SignUp.dart';
 import 'package:personal_finance/Widgets/bottomnavbar.dart';
 
@@ -43,11 +44,13 @@ class _LoginState extends State<Login> {
         _inputField2("Enter E-mail",  Icon(Icons.email_outlined),UsernameController) , 
         const SizedBox(height: 30) ,
         _inputField2("Enter Password", Icon(Icons.lock_outline) , passwordController , isPassword : true    ) , 
-        const SizedBox(height : 50 ) , 
+        const SizedBox(height : 10 ) ,
+        _ForgotPasswd(), 
+        const SizedBox(height: 20),
         _LoginBtn() , 
         const SizedBox(height: 20,) ,
         _Noacc(),
-        // const SizedBox(height: 10,) ,
+        // const SizedBox(height: 10,) , 
         // Text("Dont have an account ?")
           ]  
         ),
@@ -62,7 +65,6 @@ class _LoginState extends State<Login> {
       
     );
   }
-
   
   Widget _inputField2(String Text ,Icon icon ,  TextEditingController controller ,
   {isPassword = false }){
@@ -85,6 +87,23 @@ class _LoginState extends State<Login> {
       obscureText: isPassword,
     ) ; 
   }
+
+  Widget _ForgotPasswd(){
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.end , 
+      children: [
+        // const Text("Forgot password?", 
+        // style: TextStyle(color: Color.fromARGB(255, 255, 255, 255) , ),) ,
+        GestureDetector(
+          onTap: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context) => ForgetPasswd(),)) ;
+          },
+          child: const Text("Forget Password?" , style: TextStyle(color: Colors.white , fontWeight: FontWeight.bold),),
+        )
+      ],
+    ) ;
+  }
+
   Widget _LoginBtn() {
     return ElevatedButton(
       onPressed: () {

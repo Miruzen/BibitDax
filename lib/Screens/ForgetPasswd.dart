@@ -10,6 +10,8 @@ class ForgetPasswd extends StatefulWidget {
 
 class _ForgetPasswd extends State<ForgetPasswd> {
   TextEditingController EmailController = TextEditingController();
+  TextEditingController NewPasswordController = TextEditingController();
+  TextEditingController OldPasswordController = TextEditingController();
   bool isBtnActive = true ; 
   @override
   Widget build(BuildContext context) {
@@ -38,13 +40,22 @@ class _ForgetPasswd extends State<ForgetPasswd> {
             const SizedBox(
               height: 50,
             ),
-            _Header("   Forget Your Password"),
+            _Header("   Change Your Password"),
             const SizedBox(height: 20),
             _inputField2(
               "Input your E-mail",
               Icon(Icons.email_outlined),
               EmailController,
             ),
+            const SizedBox(height: 20,),
+            _inputField2(
+              "Your current Password",
+              Icon(Icons.lock_outline), OldPasswordController,
+            ),
+            const SizedBox(height: 20,),
+            _inputField2(
+              "Your new Password", Icon(Icons.lock_outline), NewPasswordController,
+              isPassword: true),
             const SizedBox(height: 40,),
             _Btn()
           ]),
@@ -54,7 +65,8 @@ class _ForgetPasswd extends State<ForgetPasswd> {
   Widget _Btn() {
     return ElevatedButton(
       onPressed: () {
-        if (  EmailController.text.isNotEmpty ){
+        if (  EmailController.text.isNotEmpty && OldPasswordController.text.isNotEmpty
+         && NewPasswordController.text.isNotEmpty){
         Navigator.pop(
             context,
             MaterialPageRoute(
