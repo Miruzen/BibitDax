@@ -33,6 +33,7 @@ class _SignUpState extends State<SignUp> {
   }
 
   Widget _PageSign() {
+<<<<<<< HEAD
     return Padding(
         padding: const EdgeInsets.all(30.0),
         child: Center(
@@ -60,6 +61,27 @@ class _SignUpState extends State<SignUp> {
             _Btn()
           ]),
         ));
+=======
+    return Padding( 
+      padding: const EdgeInsets.all(30.0),
+      child : Center(
+      child: Column(
+        children: [
+        const SizedBox(height: 50,) , 
+          _Header("   Sign Up") , 
+        const SizedBox(height: 100) ,
+        _inputField2("Enter Username", Icon(Icons.person_outline),  UsernameController) , 
+        const SizedBox(height: 30) ,
+        _inputField2("Enter E-mail", Icon(Icons.email_outlined),passwordController , isPassword : true    ) , 
+        const SizedBox(height : 30 ) , 
+        _inputField2("Enter Password", Icon(Icons.lock_outline), RepassController ,isPassword: true) ,
+        const SizedBox(height: 40,) ,
+        _Btn()
+          ]  
+        ),
+      )
+    ) ;
+>>>>>>> 8302745548a4933c8353657eee53f2127dfec6c1
   }
 
   Widget _Btn() {
