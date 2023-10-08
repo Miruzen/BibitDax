@@ -51,7 +51,7 @@ class _ForgetPasswd extends State<ForgetPasswd> {
             //   "Your current Password",
             //   Icon(Icons.lock_outline), OldPasswordController,
             // ),
-            // const SizedBox(height: 20,),
+            const SizedBox(height: 20,),
             _inputField2(
               "Your new Password", Icon(Icons.lock_outline), NewPasswordController,
               isPassword: true),

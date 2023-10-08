@@ -98,7 +98,7 @@ class _LoginState extends State<Login> {
           onTap: () {
             Navigator.push(context, MaterialPageRoute(builder: (context) => ForgetPasswd(),)) ;
           },
-          child: const Text("Forget Password?" , style: TextStyle(color: Colors.white , fontWeight: FontWeight.bold),),
+          child: const Text("Forgot Password?" , style: TextStyle(color: Colors.white , fontWeight: FontWeight.bold),),
         )
       ],
     ) ;
