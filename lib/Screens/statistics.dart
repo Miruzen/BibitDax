@@ -71,7 +71,7 @@ class _StatisticsState extends State<Statistics> {
                               borderRadius: BorderRadius.circular(10),
                               color: index_color == index
                                   ? Color.fromARGB(255, 47, 125, 121)
-                                  : Color.fromARGB(255, 206, 204, 204),
+                                  : Color.fromARGB(255, 200, 198, 198),
                             ),
                             alignment: Alignment.center,
                             child: Text(
