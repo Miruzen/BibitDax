@@ -45,7 +45,7 @@ class _SignUpState extends State <SignUp> {
         const SizedBox(height: 30) ,
         _inputField2("Enter E-mail", Icon(Icons.email_outlined),passwordController , isPassword : true    ) , 
         const SizedBox(height : 30 ) , 
-        _inputField2("Enter Password", Icon(Icons.lock_outline), RepassController ,) ,
+        _inputField2("Enter Password", Icon(Icons.lock_outline), RepassController ,isPassword: true) ,
         const SizedBox(height: 40,) ,
         _Btn()
           ]  
