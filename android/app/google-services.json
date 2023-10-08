@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "473119233722",
+    "project_id": "bidax-fab6c",
+    "storage_bucket": "bidax-fab6c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:473119233722:android:ddc88ef3ae3e62e79c9483",
+        "android_client_info": {
+          "package_name": "com.example.personal_finance"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDr7Ado4m3xc31N-NifQHWciZ1jqoNa00o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
