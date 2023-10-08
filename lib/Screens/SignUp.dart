@@ -11,6 +11,7 @@ class SignUp extends StatefulWidget {
 class _SignUpState extends State <SignUp> {
   TextEditingController UsernameController  = TextEditingController();
   TextEditingController passwordController = TextEditingController() ;
+  TextEditingController RepassController = TextEditingController() ; 
 
   @override
   Widget build(BuildContext context) {
@@ -44,7 +45,7 @@ class _SignUpState extends State <SignUp> {
         const SizedBox(height: 30) ,
         _inputField2("Enter E-mail", Icon(Icons.email_outlined),passwordController , isPassword : true    ) , 
         const SizedBox(height : 30 ) , 
-        _inputField2("Enter Password", Icon(Icons.lock_outline), passwordController) ,
+        _inputField2("Enter Password", Icon(Icons.lock_outline), RepassController ,) ,
         const SizedBox(height: 40,) ,
         _Btn()
           ]  
