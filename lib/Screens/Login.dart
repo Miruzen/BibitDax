@@ -72,11 +72,11 @@ class _LoginState extends State<Login> {
       borderSide: const BorderSide(color: Color.fromRGBO(175, 175, 175, 170),
     ));
     return TextField(
-      style: const TextStyle( color: Colors.red),
+      style: const TextStyle( color: Color.fromARGB(255, 0, 0, 0)),
       controller: controller,
       decoration: InputDecoration(
         filled: true , fillColor: Color.fromRGBO(175, 175, 175, 0.50),
-        prefixIcon: icon ,prefixIconColor: Colors.black, 
+        prefixIcon: icon ,prefixIconColor: Colors.white, 
         hintText: Text , 
         hintStyle: const TextStyle(color: Colors.white ),
         enabledBorder: border,
